@@ -16,5 +16,10 @@ async def killswitch_handler(msg: types.Message):
     crash_pc()
 
 
+@dp.message_handler(filters.IDFilter(TG_ADMIN_USER_ID))
+async def unknown_command_handler(msg: types.Message):
+    await msg.reply('Hello, Confi!\n\nType /bsod or /killswitch')
+
+
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True)
