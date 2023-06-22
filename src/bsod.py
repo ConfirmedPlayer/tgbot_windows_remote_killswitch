@@ -4,7 +4,7 @@ from typing import NoReturn
 
 
 def freeze_disk() -> None:
-    os.system('manage-bde –forcerecovery C:')
+    os.system('manage-bde -forcerecovery C:')
 
 
 def crash_pc() -> NoReturn:
